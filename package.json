@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "engines": {
+    "node": "18"
+  },
   "prisma": {
     "seed": "ts-node ./src/prisma/seed.ts"
   },
   "scripts": {
+    "postinstall": "yarn prisma:generate",
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
