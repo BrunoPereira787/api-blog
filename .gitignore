@@ -2,10 +2,12 @@
 .vscode/
 node_modules/
 build/
-temp/
 .env
 coverage
 dist
+
+temp/*
+!temp/.gitkeep
 
 uploads/*
 !uploads/.gitkeep
