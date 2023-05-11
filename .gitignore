@@ -5,6 +5,7 @@ build/
 .env
 coverage
 dist
+.docker/dbdataa
 
 temp/*
 !temp/.gitkeep
